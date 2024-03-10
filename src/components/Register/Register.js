@@ -34,7 +34,7 @@ class Register extends React.Component {
         })
         .then(response => response.json())
         .then(user => {
-            if (user){
+            if (user.id){
                 this.props.loadUser(user)
                 this.props.onRouteChange('home')
             }
@@ -78,14 +78,17 @@ class Register extends React.Component {
                 />
             </div>
             </fieldset>
+            
             <div className="">
             <input 
             className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib pointer" 
             type="submit" 
             value="Register"
             />
-            
             </div>
+            <div className="lh-copy mt3">
+                            <p onClick={() => onRouteChange('signin')} className="f6 link dim black db ">Sign in</p>
+                        </div>
         </form>
     </main>
     </article>
