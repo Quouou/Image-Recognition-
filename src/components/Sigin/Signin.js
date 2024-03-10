@@ -20,7 +20,7 @@ class Signin extends React.Component {
     onSubmit = (event) => {
         event.preventDefault()
 
-        fetch('https://image-recognition-o57s.onrender.com/signin', {
+        fetch('https://image-recog-api.onrender.com/signin', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

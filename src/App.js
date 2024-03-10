@@ -106,7 +106,7 @@ class App extends Component {
         .then(response => response.json())
         .then(result => {
           if(result){
-            fetch('https://image-recognition-o57s.onrender.com/image', {
+            fetch('https://image-recog-api.onrender.com/image', {
               method: 'put',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
