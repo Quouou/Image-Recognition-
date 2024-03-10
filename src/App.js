@@ -3,7 +3,6 @@ import Navigation from './components/navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
- import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import ParticlesBg from 'particles-bg'
 import Signin from './components/Sigin/Signin';
@@ -107,7 +106,7 @@ class App extends Component {
         .then(response => response.json())
         .then(result => {
           if(result){
-            fetch('http://localhost:3000/image', {
+            fetch('https://image-recognition-o57s.onrender.com/image', {
               method: 'put',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({

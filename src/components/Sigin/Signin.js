@@ -20,7 +20,7 @@ class Signin extends React.Component {
     onSubmit = (event) => {
         event.preventDefault()
 
-        fetch('http://localhost:3000/signin', {
+        fetch('https://image-recognition-o57s.onrender.com/signin', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -74,9 +74,7 @@ class Signin extends React.Component {
                                 value="Sign in"
                             />
                         </div>
-                        <div className="lh-copy mt3">
-                            <p onClick={() => onRouteChange('register')} className="f6 link dim black db ">Register</p>
-                        </div>
+                        
                     </form>
                 </main>
             </article>

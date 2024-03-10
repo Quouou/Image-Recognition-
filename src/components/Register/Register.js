@@ -23,7 +23,7 @@ class Register extends React.Component {
     
     onSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3000/register', {
+        fetch('https://image-recognition-o57s.onrender.com/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
